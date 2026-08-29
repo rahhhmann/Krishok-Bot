@@ -272,7 +272,7 @@ Full user-facing limitations are documented in-app at `pages/limitations.py`.
 
 **Ashikur Rahman**
 CSE, Patuakhali Science and Technology University (PSTU)
-GitHub: [rahhhmann](https://github.com/rahhhmann) · HuggingFace: [ashik297](https://huggingface.co/ashik297) · Kaggle: [singertv](https://www.kaggle.com/singertv)
+GitHub: [rahhhmann](https://github.com/rahhhmann) · HuggingFace: [ashik297](https://huggingface.co/ashik297) · Kaggle: [ashik]([https://www.kaggle.com/singertv)](https://www.kaggle.com/brownsugar297)
 
 ---
 
