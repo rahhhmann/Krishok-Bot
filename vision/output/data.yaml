@@ -1,0 +1,17 @@
+path: /kaggle/working/dataset_crop_disease_yolo
+train: train/images
+val: val/images
+test: test/images
+nc: 11
+names:
+  0: rice_brown_spot
+  1: rice_leaf_scald
+  2: rice_blast
+  3: rice_tungro
+  4: rice_bacterial_blight
+  5: potato_early_blight
+  6: potato_late_blight
+  7: potato_healthy
+  8: tomato_early_blight
+  9: tomato_late_blight
+  10: tomato_healthy

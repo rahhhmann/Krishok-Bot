@@ -1,0 +1,43 @@
+# ---------- Core / Agent orchestration ----------
+langgraph
+langchain-core
+langsmith
+python-dotenv
+langchain_google_genai
+
+# ---------- LLM providers ----------
+google-genai
+groq
+
+# ---------- RAG / Vector store ----------
+chromadb
+sentence-transformers
+pymupdf
+pypdf
+pdfplumber
+pytesseract
+pillow
+rank_bm25
+
+# ---------- Vision ----------
+ultralytics
+opencv-python-headless
+
+# ---------- Tools (weather / price) ----------
+requests
+beautifulsoup4
+
+# ---------- Evaluation ----------
+ragas==0.1.21
+datasets==2.21.0
+langchain_groq==0.1.10
+langchain-community
+pandas
+numpy
+
+# ---------- Streamlit UI ----------
+streamlit
+
+# ---------- Testing ----------
+pytest
+pytest-mock

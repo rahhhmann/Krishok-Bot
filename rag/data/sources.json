@@ -1,0 +1,212 @@
+{
+  "_comment": "Machine-readable manifest consumed by rag/ingest.py. Human-readable summary is sources.md — keep both in sync. extraction_hint is advisory only; ingest.py always re-verifies per-page via the Bangla-Unicode-ratio heuristic and falls back to OCR automatically, so a wrong hint here cannot silently corrupt a chunk.",
+  "documents": [
+    {
+      "filename": "krishiProjuktiHatboi_10.pdf",
+      "title": "কৃষি প্রযুক্তি হাতবই (৬ষ্ঠ সংস্করণ)",
+      "source_org": "BARI",
+      "source_url": "bari.gov.bd (manually downloaded by user)",
+      "download_date": "2026-08-15",
+      "crop": ["rice", "potato", "tomato"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "650-page multi-crop handbook using a non-Unicode legacy Bangla font (PyMuPDF text layer is garbled ASCII soup, Bangla-Unicode ratio ~0.0). Full-book OCR at ~2.8s/page would take ~30 min and mostly OCR irrelevant chapters (fruit, flower, spice, machinery, etc.). Scoped to relevant chapters only via the PDF's own bookmarks/TOC (which are in readable transliterated English, unaffected by the font issue).",
+      "page_ranges": {
+        "Kondal_Fosal_potato_tuber_crops": [26, 93],
+        "Sobji_Fosal_vegetables_incl_tomato": [164, 260],
+        "Dana_Fosal_grain_crops_incl_rice": [485, 500],
+        "Pathology_general_disease_mgmt": [564, 575]
+      },
+      "page_range_rationale": "Derived from doc.get_toc() bookmarks. Full handbook TOC preserved above the table in sources.md for future re-scoping if a later phase needs other chapters (e.g. IPM_521-538, Irrigation_504-520)."
+    },
+    {
+      "filename": "dhan chash.pdf",
+      "title": "আধুনিক ধানের চাষ (৪৫তম সংস্করণ, জুন ২০২৫)",
+      "source_org": "BRRI",
+      "source_url": "brri.gov.bd (manually downloaded by user)",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "132 pages, legacy-font text layer, full OCR (~6 min at measured rate)."
+    },
+    {
+      "filename": "dhan chasher shomossa.pdf",
+      "title": "ধান চাষের সমস্যা (৬ষ্ঠ সংস্করণ, জুন ২০২৪)",
+      "source_org": "BRRI",
+      "source_url": "brri.gov.bd (manually downloaded by user)",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "82 pages, legacy-font text layer, full OCR (~4 min)."
+    },
+    {
+      "filename": "Dhan 2.pdf",
+      "title": "ধান বিষয়ক লিফলেট ২",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "2-page scanned image, no text layer at all."
+    },
+    {
+      "filename": "Dhan 3.pdf",
+      "title": "ধান বিষয়ক লিফলেট ৩",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "6-page scanned image, no text layer."
+    },
+    {
+      "filename": "dhaner blast rog.pdf",
+      "title": "ধানের ব্লাস্ট রোগ ও দমন ব্যবস্থাপনা",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "1-page scanned leaflet, no text layer."
+    },
+    {
+      "filename": "dhaner rog o protikar.pdf",
+      "title": "ধানের রোগ ও প্রতিকার",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["rice"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "4-page scanned webpage capture, no text layer."
+    },
+    {
+      "filename": "Alu.pdf",
+      "title": "আলুর রোগ (leaflet)",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["potato"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "1-page scanned image. OCR quality-checked manually — readable output (late blight symptom description)."
+    },
+    {
+      "filename": "Alu 2.pdf",
+      "title": "আলু চাষের সর্বোত্তম পদ্ধতি",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["potato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "8 pages, clean Unicode Bangla text layer — direct extraction, no OCR needed."
+    },
+    {
+      "filename": "alu utpadon.pdf",
+      "title": "আলুর উৎপাদন প্রযুক্তি",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["potato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "13 pages, clean Unicode text layer."
+    },
+    {
+      "filename": "alur_rog_protirod_guide_bangla.pdf",
+      "title": "আলুর রোগ প্রতিরোধ নির্দেশিকা",
+      "source_org": "unspecified — needs confirmation from user",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["potato"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "2 pages, legacy-font text layer (mostly Latin scientific names extract fine but Bangla body text is garbled)."
+    },
+    {
+      "filename": "alur morok o protikar.pdf",
+      "title": "আলুর মড়ক রোগ ও তার প্রতিকার",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["potato"],
+      "extraction_hint": "scanned_ocr",
+      "notes": "2-page scanned webpage capture, no text layer."
+    },
+    {
+      "filename": "tomato.pdf",
+      "title": "টমেটো (ই-কৃষি)",
+      "source_org": "e-Krishi / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "3 pages, clean Unicode text layer."
+    },
+    {
+      "filename": "tomato rog o protikar.pdf",
+      "title": "টমেটোর রোগ ও প্রতিকার",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "4 pages, clean Unicode text layer."
+    },
+    {
+      "filename": "tomato 1.pdf",
+      "title": "টমেটোর পাতা কোঁকড়ানো রোগ",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "1 page, clean Unicode text layer (leaf curl virus)."
+    },
+    {
+      "filename": "tomato 2.pdf",
+      "title": "টমেটোর ফল পচা রোগ (Alternaria sp.)",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "partial_font_ocr",
+      "notes": "1 page, PARTIALLY garbled — some glyphs map to blank spaces rather than wrong characters, so direct extraction silently drops words. Routed to OCR to avoid an incomplete-looking-complete chunk."
+    },
+    {
+      "filename": "tomato 4.pdf",
+      "title": "টমেটোর ফল ছিদ্রকারী পোকা (Helicoverpa armigera)",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "1 page, legacy-font text layer."
+    },
+    {
+      "filename": "tomato 3.pdf",
+      "title": "টমেটোর রোগ (Colletotrichum coccodes)",
+      "source_org": "DAE",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "1 page, legacy-font text layer."
+    },
+    {
+      "filename": "tomato utpadon.pdf",
+      "title": "টমেটোর উৎপাদন প্রযুক্তি",
+      "source_org": "DAE / AIS",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "unicode_digital",
+      "notes": "1 page, clean Unicode text layer."
+    },
+    {
+      "filename": "Summer tomato production technology.pdf",
+      "title": "Summer Tomato Production Technology",
+      "source_org": "BARI (via co-author names in legacy-font header)",
+      "source_url": "not recorded — needs confirmation from user",
+      "download_date": "2026-08-15",
+      "crop": ["tomato"],
+      "extraction_hint": "legacy_font_ocr",
+      "notes": "7 pages, English title but legacy-font Bangla body text — routed to OCR. English-titled but content is Bangla, consistent with the project's Bengali-only corpus policy once OCR'd."
+    }
+  ]
+}

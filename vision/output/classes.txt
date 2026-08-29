@@ -1,0 +1,11 @@
+rice_brown_spot
+rice_leaf_scald
+rice_blast
+rice_tungro
+rice_bacterial_blight
+potato_early_blight
+potato_late_blight
+potato_healthy
+tomato_early_blight
+tomato_late_blight
+tomato_healthy

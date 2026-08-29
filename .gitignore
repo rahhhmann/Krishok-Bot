@@ -1,0 +1,32 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime caches and generated outputs
+eval/results/*.json
+eval/results/*.csv
+eval/results/*.md
+rag/chroma_db/
+*.sqlite
+*.sqlite3
+*.db
+*.tmp
+
+# Uploaded images and local artifacts
+uploads/
+tmp/
+*.log
+
+
+plan md/
+

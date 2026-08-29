@@ -1,0 +1,453 @@
+{
+  "dhan_shomadhan": {
+    "classes": {
+      "Rice___bacterial_blight": {
+        "image_count": 219,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(2301, 1080)": 166,
+          "(1080, 2301)": 53
+        }
+      },
+      "Rice___blast": {
+        "image_count": 198,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(1080, 2301)": 124,
+          "(2301, 1080)": 74
+        }
+      },
+      "Rice___brown_spot": {
+        "image_count": 90,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(2301, 1080)": 26,
+          "(1080, 2301)": 64
+        }
+      },
+      "Rice___leaf_scald": {
+        "image_count": 143,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(1080, 2301)": 81,
+          "(2301, 1080)": 62
+        }
+      },
+      "Rice___tungro": {
+        "image_count": 119,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(1080, 2301)": 84,
+          "(2301, 1080)": 35
+        }
+      }
+    },
+    "corrupted_files": [],
+    "detected_format": "classification_folder_per_class"
+  },
+  "bcdd": {
+    "classes": {
+      "Bangladeshi_Crops_Disease_Dataset/test/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Corn_(maize)___Common_rust_": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Corn_(maize)___Northern_Leaf_Blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Corn_(maize)___healthy": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Potato___Early_blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Potato___Late_blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Potato___healthy": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Rice_bacterial_leaf_blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Rice_brown_spot": {
+        "image_count": 44,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 44
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Rice_healthy": {
+        "image_count": 44,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 44
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Rice_leaf_blast": {
+        "image_count": 44,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 44
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Tomato___Bacterial_spot": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Tomato___Early_blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Tomato___Late_blight": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Tomato___healthy": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Wheat Brown rust": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Wheat Healthy": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Wheat Loose Smut": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/test/Wheat Yellow rust": {
+        "image_count": 48,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 48
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Corn_(maize)___Common_rust_": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Corn_(maize)___Northern_Leaf_Blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Corn_(maize)___healthy": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Potato___Early_blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Potato___Late_blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Potato___healthy": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Rice_bacterial_leaf_blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Rice_brown_spot": {
+        "image_count": 330,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 330
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Rice_healthy": {
+        "image_count": 330,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 330
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Rice_leaf_blast": {
+        "image_count": 330,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 330
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Tomato___Bacterial_spot": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Tomato___Early_blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Tomato___Late_blight": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Tomato___healthy": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Wheat Brown rust": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Wheat Healthy": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Wheat Loose Smut": {
+        "image_count": 354,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 354
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/train/Wheat Yellow rust": {
+        "image_count": 360,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 360
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Corn_(maize)___Common_rust_": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Corn_(maize)___Northern_Leaf_Blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Corn_(maize)___healthy": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Potato___Early_blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Potato___Late_blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Potato___healthy": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Rice_bacterial_leaf_blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Rice_brown_spot": {
+        "image_count": 66,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 66
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Rice_healthy": {
+        "image_count": 66,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 66
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Rice_leaf_blast": {
+        "image_count": 66,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 66
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Tomato___Bacterial_spot": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Tomato___Early_blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Tomato___Late_blight": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Tomato___healthy": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Wheat Brown rust": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Wheat Healthy": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Wheat Loose Smut": {
+        "image_count": 70,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 70
+        }
+      },
+      "Bangladeshi_Crops_Disease_Dataset/val/Wheat Yellow rust": {
+        "image_count": 72,
+        "corrupted_count": 0,
+        "sample_resolutions": {
+          "(96, 96)": 72
+        }
+      }
+    },
+    "corrupted_files": [],
+    "detected_format": "classification_folder_per_class"
+  }
+}

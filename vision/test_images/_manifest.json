@@ -1,0 +1,167 @@
+[
+  {
+    "class": "potato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Potato___Early_blight/406.jpg",
+    "sample_file": "potato_early_blight__0.jpg"
+  },
+  {
+    "class": "potato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Potato___Early_blight/405.jpg",
+    "sample_file": "potato_early_blight__1.jpg"
+  },
+  {
+    "class": "potato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Potato___Early_blight/160.jpg",
+    "sample_file": "potato_early_blight__2.jpg"
+  },
+  {
+    "class": "potato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Potato___Late_blight/242.jpg",
+    "sample_file": "potato_late_blight__0.jpg"
+  },
+  {
+    "class": "potato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Potato___Late_blight/185.jpg",
+    "sample_file": "potato_late_blight__1.jpg"
+  },
+  {
+    "class": "potato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Potato___Late_blight/20.jpg",
+    "sample_file": "potato_late_blight__2.jpg"
+  },
+  {
+    "class": "potato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/test/Potato___healthy/129.jpg",
+    "sample_file": "potato_healthy__0.jpg"
+  },
+  {
+    "class": "potato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Potato___healthy/454.jpg",
+    "sample_file": "potato_healthy__1.jpg"
+  },
+  {
+    "class": "potato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Potato___healthy/219.jpg",
+    "sample_file": "potato_healthy__2.jpg"
+  },
+  {
+    "class": "tomato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Tomato___Early_blight/15.jpg",
+    "sample_file": "tomato_early_blight__0.jpg"
+  },
+  {
+    "class": "tomato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___Early_blight/53.jpg",
+    "sample_file": "tomato_early_blight__1.jpg"
+  },
+  {
+    "class": "tomato_early_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___Early_blight/242.jpg",
+    "sample_file": "tomato_early_blight__2.jpg"
+  },
+  {
+    "class": "tomato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___Late_blight/367.jpg",
+    "sample_file": "tomato_late_blight__0.jpg"
+  },
+  {
+    "class": "tomato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___Late_blight/7.jpg",
+    "sample_file": "tomato_late_blight__1.jpg"
+  },
+  {
+    "class": "tomato_late_blight",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Tomato___Late_blight/255.jpg",
+    "sample_file": "tomato_late_blight__2.jpg"
+  },
+  {
+    "class": "tomato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___healthy/332.jpg",
+    "sample_file": "tomato_healthy__0.jpg"
+  },
+  {
+    "class": "tomato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/train/Tomato___healthy/362.jpg",
+    "sample_file": "tomato_healthy__1.jpg"
+  },
+  {
+    "class": "tomato_healthy",
+    "original_path": "/kaggle/input/datasets/musfiqurtuhin/bangladeshi-crops-disease-dataset-bcdd/Bangladeshi_Crops_Disease_Dataset/val/Tomato___healthy/190.jpg",
+    "sample_file": "tomato_healthy__2.jpg"
+  },
+  {
+    "class": "rice_bacterial_blight",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___bacterial_blight/sb_wb_114.jpg",
+    "sample_file": "rice_bacterial_blight__0.jpg"
+  },
+  {
+    "class": "rice_bacterial_blight",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___bacterial_blight/sb_wb_129.jpg",
+    "sample_file": "rice_bacterial_blight__1.jpg"
+  },
+  {
+    "class": "rice_bacterial_blight",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___bacterial_blight/sb_wb_211.jpg",
+    "sample_file": "rice_bacterial_blight__2.jpg"
+  },
+  {
+    "class": "rice_blast",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___blast/rb_wb_20.jpg",
+    "sample_file": "rice_blast__0.jpg"
+  },
+  {
+    "class": "rice_blast",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___blast/rb_wb_2.jpg",
+    "sample_file": "rice_blast__1.jpg"
+  },
+  {
+    "class": "rice_blast",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___blast/rb_wb_172.jpg",
+    "sample_file": "rice_blast__2.jpg"
+  },
+  {
+    "class": "rice_brown_spot",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___brown_spot/bs_wb_53.jpg",
+    "sample_file": "rice_brown_spot__0.jpg"
+  },
+  {
+    "class": "rice_brown_spot",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___brown_spot/bs_wb_47.jpg",
+    "sample_file": "rice_brown_spot__1.jpg"
+  },
+  {
+    "class": "rice_brown_spot",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___brown_spot/bs_wb_34.jpg",
+    "sample_file": "rice_brown_spot__2.jpg"
+  },
+  {
+    "class": "rice_leaf_scald",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___leaf_scald/ls_wb_84.jpg",
+    "sample_file": "rice_leaf_scald__0.jpg"
+  },
+  {
+    "class": "rice_leaf_scald",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___leaf_scald/ls_wb_77.jpg",
+    "sample_file": "rice_leaf_scald__1.jpg"
+  },
+  {
+    "class": "rice_leaf_scald",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___leaf_scald/ls_wb_37.jpg",
+    "sample_file": "rice_leaf_scald__2.jpg"
+  },
+  {
+    "class": "rice_tungro",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___tungro/rt_wb_53.jpg",
+    "sample_file": "rice_tungro__0.jpg"
+  },
+  {
+    "class": "rice_tungro",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___tungro/rt_wb_84.jpg",
+    "sample_file": "rice_tungro__1.jpg"
+  },
+  {
+    "class": "rice_tungro",
+    "original_path": "/kaggle/input/datasets/nirmalsankalana/dhan-shomadhan/Rice___tungro/rt_wb_62.jpg",
+    "sample_file": "rice_tungro__2.jpg"
+  }
+]

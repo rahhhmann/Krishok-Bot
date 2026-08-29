@@ -1,0 +1,16 @@
+{
+  "potato__বরিশাল": {
+    "saved_at": "2026-08-19T23:16:04.286461",
+    "result": {
+      "available": true,
+      "crop": "potato",
+      "price_bdt_per_kg": 23.0,
+      "price_range": "৳22.00 - ৳24.00",
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "date": "2030-05-02",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/bc203052-d293-4396-a6cc-780157d28e0b.pdf",
+      "division_note": " বিভাগ: বরিশাল",
+      "error": ""
+    }
+  }
+}

@@ -1,0 +1,1115 @@
+{
+  "market_v11__বরিশাল": {
+    "saved_at": "2026-08-20T01:09:16",
+    "result": {
+      "available": true,
+      "division": "বরিশাল",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/1e4bcf13-85b6-453e-88db-577477f94204.pdf",
+      "items": [
+        {
+          "product": "আটা (প্যাকেট-সাদা)",
+          "price_range": "৳55 - ৳65",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আটা (খোলা)",
+          "price_range": "৳48 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর ডাল (উন্নত)",
+          "price_range": "৳150 - ৳170",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর ডাল (মোটা)",
+          "price_range": "৳90 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ ডাল (সরু- উন্নত)",
+          "price_range": "৳160 - ৳170",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ ডাল (মোটা)",
+          "price_range": "৳125 - ৳140",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কেসারি ডাল",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ছোলা",
+          "price_range": "৳90 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "সয়াবিন তেল (খোলা)",
+          "price_range": "৳185 - ৳189",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "পাম তেল (খোলা)",
+          "price_range": "৳162 - ৳167",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "সরিষার তেল (খোলা)",
+          "price_range": "৳200 - ৳230",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "চিনি-আমদানিকৃত (সাদা-খোলা)",
+          "price_range": "৳105 - ৳110",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পেঁয়াজ (দেশী)",
+          "price_range": "৳45 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (দেশী)",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (চায়না)",
+          "price_range": "৳140 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আদা (আমদানিকৃত)",
+          "price_range": "৳130 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "শুকনা মরিচ (দেশী)",
+          "price_range": "৳320 - ৳370",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কাঁচা মরিচ",
+          "price_range": "৳80 - ৳140",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আলু",
+          "price_range": "৳24 - ৳30",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "বেগুন",
+          "price_range": "৳60 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কাঁচা পেঁপে",
+          "price_range": "৳25 - ৳35",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মিষ্টি কুমড়া",
+          "price_range": "৳40 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চিচিঙ্গা",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ধুন্দুল",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কচুরলতি",
+          "price_range": "৳60 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "বরবটি",
+          "price_range": "৳60 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কচুমুখী",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "লাউ",
+          "price_range": "৳40 - ৳80",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "চালকুমড়া (লম্বা)",
+          "price_range": "৳40 - ৳60",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "শসা",
+          "price_range": "৳30 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "উচ্ছে / করল্লা",
+          "price_range": "৳60 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ঝিঙ্গা",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ঢেঁড়স",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পটল",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েোেররোি",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "োঁচো (েিো)",
+          "price_range": "৳40 - ৳60",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "কাতলা মাছ (চাষের) 1.5- 4",
+          "price_range": "৳320 - ৳500",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "তেলোনপয়ো মোছ (চাষের)",
+          "price_range": "৳180 - ৳240",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "মোাংস- গরু",
+          "price_range": "৳780 - ৳800",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ছোগরির মোাংস",
+          "price_range": "৳1050 - ৳1200",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (দেশী) িযোন্ত",
+          "price_range": "৳550 - ৳620",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (সোনালী / েোিোরর্োড)ব",
+          "price_range": "৳270 - ৳330",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (িয়িোর) িযোন্ত",
+          "price_range": "৳170 - ৳190",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নডমিঃ মুরগি (দেশী)",
+          "price_range": "৳70 - ৳80",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "নডমিঃ ফোম বসাদা / িোি",
+          "price_range": "৳47 - ৳48",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "ির্ণ (প্যাকেটিোি-মোটা ও নচেি)",
+          "price_range": "৳28 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "গুুঁরড়ো দুি (পনিপ্যোে)",
+          "price_range": "৳620 - ৳930",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আরপি",
+          "price_range": "৳310 - ৳400",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েিো",
+          "price_range": "৳40 - ৳60",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "কপয়োরো",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আম",
+          "price_range": "৳130 - ৳280",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চোি মোটা (গুটি স্বিো)",
+          "price_range": "৳50 - ৳52",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চোি- মো োনর (পোিোম, নি িোি-28)",
+          "price_range": "৳55 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চোি সরু (নিরোশোইি, েোটোর)",
+          "price_range": "৳65 - ৳95",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চোি সরু (র্োিোম, নর্ররোই)",
+          "price_range": "৳85 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চোি সুগন্ধী (নি িোি-34)",
+          "price_range": "৳140 - ৳210",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        }
+      ],
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "division_note": "",
+      "error": ""
+    }
+  },
+  "market_v11__ময়মনসিংহ": {
+    "saved_at": "2026-08-20T01:12:53",
+    "result": {
+      "available": true,
+      "division": "ময়মনসিংহ",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/eaa757a0-59f8-41c7-972f-188346647c4d.pdf",
+      "items": [
+        {
+          "product": "আটা (প্যাকেট-সাদা)",
+          "price_range": "৳50 - ৳55",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আটা (খোলা)",
+          "price_range": "৳46 - ৳48",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর ডাল (উন্নত)",
+          "price_range": "৳160 - ৳165",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর ডাল (মোটা)",
+          "price_range": "৳85 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ ডাল (সরু- উন্নত)",
+          "price_range": "৳150 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ ডাল (মোটা)",
+          "price_range": "৳130 - ৳140",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কেসারি ডাল",
+          "price_range": "৳70 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মাষকলাই ডাল",
+          "price_range": "৳170 - ৳175",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "ছোলা",
+          "price_range": "৳85 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "সয়াবিন তেল (খোলা)",
+          "price_range": "৳186 - ৳188",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "পাম তেল (খোলা)",
+          "price_range": "৳164 - ৳166",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "সরিষার তেল (খোলা)",
+          "price_range": "৳240 - ৳250",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "চিনি-আমদোিীকৃি (সাদা-খোলা)",
+          "price_range": "৳108 - ৳110",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পেঁয়াজ (কদনশ) িতুি",
+          "price_range": "৳40 - ৳42",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (দেশী)",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (চায়না)",
+          "price_range": "৳140 - ৳150",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আদো (আমদোিীকৃি)",
+          "price_range": "৳100 - ৳120",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "শুকনা মরিচ (দেশী)",
+          "price_range": "৳320 - ৳350",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কাঁচা মরিচ",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আলু-সাদা (কদনশ) হল্যোন্ড",
+          "price_range": "৳25 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "বেগুন",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কাঁচা পেঁপে",
+          "price_range": "৳20 - ৳30",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মিষ্টি কুমড়া",
+          "price_range": "৳30 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নচনচিংগো",
+          "price_range": "৳50 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "টমেটো (কদনশ)",
+          "price_range": "৳110 - ৳120",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কচুরলতি",
+          "price_range": "৳50 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "বরবটি",
+          "price_range": "৳60 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুখীেচু",
+          "price_range": "৳40 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "লাউ",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "চোি কুমড়ো (লম্বা)",
+          "price_range": "৳40 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "শসা (হোইনিড)",
+          "price_range": "৳30 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "উচ্ছে / করল্লা",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পটল",
+          "price_range": "৳40 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কেঁড়স",
+          "price_range": "৳60 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েোেররোি",
+          "price_range": "৳50 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ধুন্দুল",
+          "price_range": "৳40 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ন িংগো",
+          "price_range": "৳70 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রুই মাছ (চাষের)",
+          "price_range": "৳260 - ৳450",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কাতলা মাছ (চাষের)",
+          "price_range": "৳280 - ৳450",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মোিংস- গরু",
+          "price_range": "৳750 - ৳780",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ছোগরির মোিংস",
+          "price_range": "৳1100 - ৳1200",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (দেশী) িযোন্ত",
+          "price_range": "৳550 - ৳560",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (েে / সোনালী) িযোন্ত",
+          "price_range": "৳280 - ৳320",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ-মুরগি (িয়িোর) িযোন্ত",
+          "price_range": "৳180 - ৳185",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নডমিঃ মুরগি (কদনশ)",
+          "price_range": "৳18.50 - ৳20",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নডমিঃ ফোম বসাদা / িোি",
+          "price_range": "৳11.70 - ৳12.50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ির্ণ (প্যাকেটিোি-মোটা ও নচেি)",
+          "price_range": "৳30 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "গুুঁরড়ো দুি (পনিপ্যোে)",
+          "price_range": "৳700 - ৳920",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আরপি",
+          "price_range": "৳320 - ৳380",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েিো (সোগর)",
+          "price_range": "৳20 - ৳30",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মো োনর (নর্আর- 23, নি িোি-49 ইিযোনদ)",
+          "price_range": "৳54 - ৳58",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "সুগন্ধী (*নি িোি- 34 ইিযোনদ)",
+          "price_range": "৳120 - ৳210",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মো োনর (নি িোি- 28, নি িোি-29)",
+          "price_range": "৳52 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নচেি (নি িোি-50, নি িোি-63, নি িোি-81 ইিযোনদ)",
+          "price_range": "৳74 - ৳86",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        }
+      ],
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "division_note": "",
+      "error": ""
+    }
+  },
+  "potato__ঢাকা": {
+    "saved_at": "2026-08-20T10:24:42",
+    "result": {
+      "available": true,
+      "crop": "potato",
+      "price_bdt_per_kg": 27.5,
+      "price_range": "৳25 - ৳30",
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/58ce53da-23f4-4f8d-921a-cba81627a8ce.pdf",
+      "division_note": "বিভাগ উল্লেখ করা হয়নি — ঢাকা বিভাগ default হিসেবে ব্যবহৃত হয়েছে। বিভাগ: ঢাকা",
+      "error": "",
+      "unit": "প্রতি কেজি"
+    }
+  },
+  "potato__বরিশাল": {
+    "saved_at": "2026-08-20T10:24:43",
+    "result": {
+      "available": true,
+      "crop": "potato",
+      "price_bdt_per_kg": 27.0,
+      "price_range": "৳24 - ৳30",
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/1e4bcf13-85b6-453e-88db-577477f94204.pdf",
+      "division_note": "বিভাগ: বরিশাল",
+      "error": "",
+      "unit": "প্রতি কেজি"
+    }
+  },
+  "tomato__সিলেট": {
+    "saved_at": "2026-08-20T10:24:44",
+    "result": {
+      "available": true,
+      "crop": "tomato",
+      "price_bdt_per_kg": 120.0,
+      "price_range": "৳100 - ৳140",
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/52666a83-2709-4a53-936f-cc79ded89187.pdf",
+      "division_note": "বিভাগ: সিলেট",
+      "error": "",
+      "unit": "প্রতি কেজি"
+    }
+  },
+  "market_v11__ঢাকা": {
+    "saved_at": "2026-08-20T10:24:46",
+    "result": {
+      "available": true,
+      "division": "ঢাকা",
+      "date": "2026-08-19",
+      "source": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-dam/2026/7/58ce53da-23f4-4f8d-921a-cba81627a8ce.pdf",
+      "items": [
+        {
+          "product": "আটা (প্যাকেট-সাদা)",
+          "price_range": "৳55 - ৳65",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "খোলা",
+          "price_range": "৳46 - ৳50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর ডাল (উন্নত)",
+          "price_range": "৳150 - ৳170",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসুর (মোটা)",
+          "price_range": "৳90 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ (সরু- উন্নত)",
+          "price_range": "৳160 - ৳170",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুগ (মোটা)",
+          "price_range": "৳120 - ৳130",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কেসারি ডাল",
+          "price_range": "৳80 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মাষকলাই ডাল",
+          "price_range": "৳170 - ৳180",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "বুট",
+          "price_range": "৳100 - ৳120",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েলোই (খোলা)",
+          "price_range": "৳90 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কিল (সয়াবিন (খোলা))",
+          "price_range": "৳185 - ৳189",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "পাম (খোলা)",
+          "price_range": "৳162 - ৳167",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "সয়াবিন (ক্যান 1নলিঃ বিভিন্ন ব্র্যোন্ড)",
+          "price_range": "৳199 - ৳200",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "সয়াবিন (ক্যান 5নলিঃবিভিন্ন ব্র্যোন্ড)",
+          "price_range": "৳970 - ৳975",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "সরিষার তেল (খোলা)",
+          "price_range": "৳198 - ৳216",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "নিনি (আমদানিকৃত (সাদা-খোলা))",
+          "price_range": "৳110 - ৳115",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মসলো (পেঁয়াজ (দেশী))",
+          "price_range": "৳45 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (দেশী)",
+          "price_range": "৳80 - ৳110",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রসুন (িোয়িো)",
+          "price_range": "৳140 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আদা (আমদানিকৃত)",
+          "price_range": "৳130 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "শুেিো মনরি (দেশী)",
+          "price_range": "৳320 - ৳400",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "োঁিো মনরি",
+          "price_range": "৳80 - ৳160",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আলু",
+          "price_range": "৳25 - ৳30",
+          "unit": "প্রতি কেজি",
+          "category": "সর্নি"
+        },
+        {
+          "product": "বেগুন",
+          "price_range": "৳60 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "োঁিো কেঁরপ",
+          "price_range": "৳25 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মিষ্টি কুমড়া",
+          "price_range": "৳40 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "চিচিঙ্গা",
+          "price_range": "৳45 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "মুখীকচু",
+          "price_range": "৳50 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "বরবটি",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "লোউ",
+          "price_range": "৳50 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পটল",
+          "price_range": "৳60 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "কেঁড়স",
+          "price_range": "৳50 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "শসা",
+          "price_range": "৳30 - ৳70",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "িোলকুমড়ো (িোনল)",
+          "price_range": "৳40 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েোেররোল",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ন ংগো",
+          "price_range": "৳60 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ধুন্দুল",
+          "price_range": "৳50 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "উরে / করল্লা",
+          "price_range": "৳50 - ৳80",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েচুরলনি",
+          "price_range": "৳50 - ৳100",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "রুই মাছ (িোরের) 1 1 - 4 2",
+          "price_range": "৳340 - ৳500",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "1 েোিল (িোরের) 1 -4 2",
+          "price_range": "৳330 - ৳450",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পোংগোস (িোরের)",
+          "price_range": "৳180 - ৳260",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "তেলাপিয়া (িোরের)",
+          "price_range": "৳200 - ৳280",
+          "unit": "প্রতি লিটার",
+          "category": ""
+        },
+        {
+          "product": "কমোরগ / মুরগি (ব্রয়লার)",
+          "price_range": "৳190 - ৳200",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "দেশী",
+          "price_range": "৳600 - ৳650",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েে / সোনালী",
+          "price_range": "৳300 - ৳350",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "সোনালী (েোলোরর্োড / বহোইনিড)",
+          "price_range": "৳270 - ৳300",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "গরু",
+          "price_range": "৳780 - ৳800",
+          "unit": "প্রতি কেজি",
+          "category": "মোংস"
+        },
+        {
+          "product": "োগল",
+          "price_range": "৳1050 - ৳1250",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নডমিঃ (মুরগি (সোনালী))",
+          "price_range": "৳16.67 - ৳17.50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "ফোম বসাদা / লোল",
+          "price_range": "৳11.25 - ৳12.50",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "গুুঁরড়ো (পনলপ্যোে)",
+          "price_range": "৳620 - ৳930",
+          "unit": "প্রতি কেজি",
+          "category": "দুধ"
+        },
+        {
+          "product": "লর্ণ (প্যাকেটিোি-মোটা ও নিেি)",
+          "price_range": "৳25 - ৳40",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "আরপল",
+          "price_range": "৳300 - ৳400",
+          "unit": "প্রতি কেজি",
+          "category": "ফল"
+        },
+        {
+          "product": "আম",
+          "price_range": "৳100 - ৳300",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "েলো (সোগর)",
+          "price_range": "৳35 - ৳50",
+          "unit": "প্রতিটি",
+          "category": ""
+        },
+        {
+          "product": "িোল (গুটি স্বিোব (মোটা))",
+          "price_range": "৳50 - ৳52",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "পোিোম, নি ধোি 28, নি ধোি-29 (মো োনর)",
+          "price_range": "৳55 - ৳60",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নিরোশোইল-শম্পো েোটোনর (সরু)",
+          "price_range": "৳65 - ৳95",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নর্ররোই (সরু)",
+          "price_range": "৳85 - ৳90",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        },
+        {
+          "product": "নি ধোি-34 (সুগন্ধী)",
+          "price_range": "৳140 - ৳210",
+          "unit": "প্রতি কেজি",
+          "category": ""
+        }
+      ],
+      "market": "DAM দৈনিক বিভাগীয় খুচরা বাজারদর (PDF)",
+      "division_note": "বিভাগ উল্লেখ করা হয়নি — ঢাকা বিভাগ default হিসেবে ব্যবহৃত হয়েছে।",
+      "error": ""
+    }
+  }
+}
