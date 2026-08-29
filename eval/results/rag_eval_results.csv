@@ -1,0 +1,3 @@
+id,query,lang,expected_route,expected_crop,actual_needs_rag,actual_needs_weather,actual_needs_price,actual_crop,route_source,route_correct,detected_script,retrieved_chunk_count,retrieval_hit,answer_length_chars,injection_flagged,proxy_faithfulness_overlap,latency_seconds,run_error
+q01,ধানের ব্লাস্ট রোগের প্রতিকার কী?,bn,rag,rice,True,False,False,ধান,llm,True,bangla,5,True,1851,False,0.6064,28.375,
+q10,dhaner poka doman korbo kivabe,banglish,rag,rice,True,False,False,ধান,llm,True,latin,5,True,1729,False,0.5038,5.563,

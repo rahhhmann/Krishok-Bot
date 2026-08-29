@@ -12,21 +12,21 @@ __pycache__/
 .venv/
 venv/
 
-# Runtime caches and generated outputs
-eval/results/*.json
-eval/results/*.csv
-eval/results/*.md
-rag/chroma_db/
+# Runtime caches (transient — not results)
 *.sqlite
-*.sqlite3
 *.db
 *.tmp
+
+# ChromaDB vector store — committed intentionally for Streamlit Cloud
+# deployment (fresh clones have no local index to rebuild from).
+# The generic *.sqlite3 rule above would otherwise block its internal
+# database file, so it's explicitly re-included here.
+*.sqlite3
+
 
 # Uploaded images and local artifacts
 uploads/
 tmp/
 *.log
 
-
 plan md/
-

@@ -1,0 +1,104 @@
+[
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\potato_late_blight__0.jpg",
+    "detections": [
+      {
+        "class_name": "potato_late_blight",
+        "confidence": 0.99610835313797,
+        "tier": "green",
+        "bbox": [
+          0.0,
+          0.009301758371293545,
+          95.99773406982422,
+          96.0
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  },
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\rice_brown_spot__0.jpg",
+    "detections": [
+      {
+        "class_name": "rice_leaf_scald",
+        "confidence": 0.548359751701355,
+        "tier": "red",
+        "bbox": [
+          0.0,
+          0.0,
+          1080.0,
+          2299.16162109375
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  },
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\rice_leaf_scald__1.jpg",
+    "detections": [
+      {
+        "class_name": "rice_leaf_scald",
+        "confidence": 0.71829754114151,
+        "tier": "amber",
+        "bbox": [
+          0.0,
+          0.0,
+          1080.0,
+          2299.465087890625
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  },
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\rice_leaf_scald__2.jpg",
+    "detections": [
+      {
+        "class_name": "rice_leaf_scald",
+        "confidence": 0.7089495062828064,
+        "tier": "amber",
+        "bbox": [
+          0.0,
+          9.602933883666992,
+          1080.0,
+          2298.159912109375
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  },
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\rice_tungro__2.jpg",
+    "detections": [
+      {
+        "class_name": "rice_tungro",
+        "confidence": 0.9614534378051758,
+        "tier": "green",
+        "bbox": [
+          0.0,
+          0.0,
+          1080.0,
+          2301.0
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  },
+  {
+    "image": "E:\\krishokbot\\vision\\test_images_subset\\tomato_healthy__0.jpg",
+    "detections": [
+      {
+        "class_name": "tomato_healthy",
+        "confidence": 0.9732866883277893,
+        "tier": "green",
+        "bbox": [
+          0.0,
+          0.0,
+          96.0,
+          96.0
+        ]
+      }
+    ],
+    "note": "external/unseen image -- NOT part of train/val/test, qualitative only"
+  }
+]
