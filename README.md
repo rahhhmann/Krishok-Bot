@@ -3,6 +3,7 @@
 An agentic, source-grounded advisory assistant for Bangladeshi farmers — built as a retrieval-augmented, tool-calling agent with an integrated crop disease vision model, entirely in Bengali.
 
 KrishokBot answers agriculture questions by routing each query through a LangGraph agent that decides, per query, whether it needs document retrieval (RAG), live weather data, live market prices, or crop-disease image analysis — then synthesizes a single grounded answer with source citations.
+Live Demo: [krishokbot.streamlit.app](https://krishokbot.streamlit.app/)
 
 ---
 
