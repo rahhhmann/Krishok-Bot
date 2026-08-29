@@ -1,43 +1,44 @@
 # ---------- Core / Agent orchestration ----------
-langgraph
-langchain-core
-langsmith
+langgraph==0.4.5
+langchain-core==0.2.43
+langsmith==0.1.147
 python-dotenv
-langchain_google_genai
+langchain-google-genai==1.0.10
 
 # ---------- LLM providers ----------
-google-genai
-groq
+google-genai==2.19.0
+groq==0.37.1
 
 # ---------- RAG / Vector store ----------
-chromadb
-sentence-transformers
-pymupdf
-pypdf
-pdfplumber
-pytesseract
-pillow
-rank_bm25
+chromadb==1.5.9
+sentence-transformers==5.7.0
+pymupdf==1.28.2
+pypdf==6.16.1
+pdfplumber==0.11.10
+pytesseract==0.3.13
+pillow==12.3.0
+rank-bm25==0.2.2
 
 # ---------- Vision ----------
-ultralytics
-opencv-python-headless
+ultralytics==8.4.120
+opencv-python-headless==4.11.0.86
 
-# ---------- Tools (weather / price) ----------
-requests
-beautifulsoup4
+# ---------- Tools ----------
+requests==2.34.2
+beautifulsoup4==4.15.0
 
 # ---------- Evaluation ----------
 ragas==0.1.21
 datasets==2.21.0
-langchain_groq==0.1.10
-langchain-community
-pandas
-numpy
+langchain-groq==0.1.10
+langchain-community==0.2.19
+pandas==2.3.3
+numpy==1.26.4
 
 # ---------- Streamlit UI ----------
-streamlit
+streamlit==1.60.0
+protobuf==4.25.8
 
 # ---------- Testing ----------
-pytest
-pytest-mock
+pytest==9.1.1
+pytest-mock==3.15.1
