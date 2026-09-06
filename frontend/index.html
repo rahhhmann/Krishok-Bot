@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KrishokBot — কৃষকবট</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EE;
+  --surface:#FFFEFB;
+  --husk:#EFE9DA;
+  --border:#E2DCC9;
+  --ink:#1F2420;
+  --ink-muted:#5B584F;
+  --paddy:#2F6F4E;
+  --paddy-deep:#1B4430;
+  --paddy-soft:#E6F0EA;
+  --soil:#8A5A34;
+  --soil-soft:#F3E9DD;
+  --amber:#B8860B;
+  --red:#B3401E;
+  --radius-lg:20px;
+  --radius-sm:10px;
+  --header-h:79px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;height:100%;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter','Noto Sans Bengali',-apple-system,sans-serif;
+  font-size:15px;
+  line-height:1.55;
+}
+::selection{background:var(--paddy-soft);}
+:focus-visible{outline:2px solid var(--paddy);outline-offset:2px;}
+*::-webkit-scrollbar{width:8px;height:8px;}
+*::-webkit-scrollbar-track{background:transparent;}
+*::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px;}
+*::-webkit-scrollbar-thumb:hover{background:#C9C0A6;}
+
+/* ---------- shell ---------- */
+.shell{display:flex;height:100vh;overflow:hidden;}
+
+/* left rail */
+.rail{
+  width:76px;flex:none;background:var(--paddy-deep);
+  display:flex;flex-direction:column;align-items:center;
+  padding:20px 0;gap:6px;
+}
+.rail-mark{
+  width:38px;height:38px;margin-bottom:22px;color:#EFE9DA;
+}
+.rail-btn{
+  width:52px;height:52px;border-radius:14px;border:none;background:transparent;
+  color:#CFE0D5;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;font-family:inherit;font-size:10.5px;cursor:pointer;transition:background .15s ease;
+}
+.rail-btn svg{width:20px;height:20px;}
+.rail-btn.active{background:rgba(255,255,255,.12);color:#fff;}
+.rail-btn:hover{background:rgba(255,255,255,.08);}
+.rail-spacer{flex:1;}
+.rail-clear{
+  width:52px;height:52px;border-radius:14px;border:none;background:transparent;
+  color:#CFE0D5;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;font-family:inherit;font-size:10.5px;cursor:pointer;transition:background .15s ease,color .15s ease;
+}
+.rail-clear svg{width:19px;height:19px;}
+.rail-clear:hover{background:rgba(179,64,30,.22);color:#F3C9BA;}
+
+/* main column */
+.main{flex:1;display:flex;flex-direction:column;min-width:0;}
+.topbar{
+  height:var(--header-h);box-sizing:border-box;padding:0 28px;border-bottom:1px solid var(--paddy);
+  display:flex;align-items:center;justify-content:space-between;background:var(--paddy-soft);
+}
+.topbar h1{color:var(--paddy-deep);}
+.topbar .sub{color:var(--ink-muted);}
+.topbar .status-dot{outline:none;}
+#mode-hint{color:var(--paddy-deep);opacity:.75;}
+.topbar-actions{display:flex;align-items:center;gap:14px;}
+.clear-btn{display:none;}
+.topbar-left{display:flex;align-items:center;gap:14px;}
+.topbar h1{
+  font-family:'Fraunces',serif;font-weight:500;font-size:21px;margin:0;letter-spacing:-.2px;
+}
+.topbar .sub{color:var(--ink-muted);font-size:13px;}
+.status-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:6px;background:var(--red);}
+.status-dot.ok{background:var(--paddy);}
+
+.content{flex:1;display:flex;min-height:0;}
+
+/* conversation column */
+.convo-col{flex:1;display:flex;flex-direction:column;min-width:0;border-right:1px solid var(--border);}
+.convo{flex:1;overflow-y:auto;padding:28px 32px;}
+.convo-inner{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:18px;}
+
+.empty{max-width:600px;margin:14vh auto 0;text-align:center;}
+.empty-mark{width:44px;height:44px;color:var(--paddy);margin:0 auto 18px;opacity:.85;}
+.empty h2{font-family:'Fraunces',serif;font-weight:500;font-size:28px;margin:0 0 10px;}
+.empty p{color:var(--ink-muted);font-size:14.5px;}
+.empty .examples{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px;}
+.example-btn{
+  display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);
+  border-radius:24px;padding:11px 18px;font-family:'Noto Sans Bengali',sans-serif;font-size:13.5px;
+  cursor:pointer;color:var(--ink);transition:border-color .15s ease,background .15s ease,transform .12s ease;
+}
+.example-btn svg{width:14px;height:14px;color:var(--paddy);flex:none;}
+.example-btn .taka-icon{color:var(--paddy);font-weight:700;font-size:15px;line-height:1;flex:none;}
+.example-btn:hover{border-color:var(--paddy);background:var(--paddy-soft);transform:translateY(-1px);}
+
+.msg{max-width:88%;}
+.msg.user{align-self:flex-end;}
+.msg.assistant{align-self:flex-start;}
+.bubble{
+  padding:13px 16px;border-radius:var(--radius-sm);font-family:'Noto Sans Bengali','Inter',sans-serif;
+  white-space:pre-wrap;
+}
+.msg.user .bubble{background:var(--surface);border:1px solid var(--paddy);box-shadow:0 1px 2px rgba(31,36,32,.04);}
+.msg.assistant .bubble{background:var(--surface);border:1px solid var(--border);box-shadow:0 1px 2px rgba(31,36,32,.04);}
+
+.typing-dots{display:inline-flex;gap:4px;align-items:center;padding:2px 0;}
+.typing-dots span{width:5px;height:5px;border-radius:50%;background:var(--ink-muted);animation:typing-bounce 1.1s infinite ease-in-out;}
+.typing-dots span:nth-child(2){animation-delay:.15s;}
+.typing-dots span:nth-child(3){animation-delay:.3s;}
+@keyframes typing-bounce{0%,60%,100%{opacity:.3;transform:translateY(0);}30%{opacity:1;transform:translateY(-3px);}}
+@media (prefers-reduced-motion: reduce){.typing-dots span{animation:none;opacity:.6;}}
+
+.citations{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.citation-chip{
+  font-size:11.5px;color:var(--ink-muted);background:var(--paddy-soft);border:1px solid var(--paddy);
+  border-radius:20px;padding:3px 10px;
+}
+
+.market-card{
+  margin-top:10px;border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;
+}
+.market-card-head{
+  background:var(--soil-soft);padding:10px 14px;display:flex;align-items:baseline;justify-content:space-between;
+  border-bottom:1px solid var(--border);
+}
+.market-card-head b{color:var(--soil);font-size:13px;}
+.market-card-head span{font-size:11.5px;color:var(--ink-muted);}
+.market-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.market-table td{padding:7px 14px;border-bottom:1px solid var(--husk);}
+.market-table tr:last-child td{border-bottom:none;}
+.market-table td:first-child{color:var(--ink);}
+.market-table td:last-child{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.market-table td.unit{color:var(--ink-muted);font-weight:400;font-size:11px;}
+.market-note{padding:8px 14px;font-size:11px;color:var(--ink-muted);border-top:1px solid var(--husk);}
+
+.composer{border-top:1px solid var(--border);padding:16px 32px 20px;background:var(--surface);}
+.composer-inner{max-width:680px;margin:0 auto;}
+.input-row{display:flex;gap:8px;align-items:flex-end;}
+textarea#msg-input{
+  flex:1;resize:none;border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:12px 14px;font-family:'Noto Sans Bengali','Inter',sans-serif;font-size:14.5px;
+  max-height:140px;min-height:46px;background:var(--bg);
+}
+textarea#msg-input:focus{outline:none;border-color:var(--paddy);}
+.send-btn{
+  background:var(--paddy);color:#fff;border:none;border-radius:var(--radius-sm);
+  width:46px;height:46px;flex:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .15s ease;
+}
+.send-btn:hover{background:var(--paddy-deep);}
+.send-btn.stopping{background:var(--ink);}
+.send-btn.stopping:hover{background:#000;}
+.send-btn:disabled{background:var(--border);cursor:default;}
+.location-pill{
+  position:relative;display:flex;align-items:center;gap:6px;flex:none;border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:0 10px;height:46px;background:var(--bg);cursor:pointer;
+  transition:border-color .15s ease;user-select:none;
+}
+.location-pill:hover, .location-pill.open{border-color:var(--paddy);}
+.location-pill svg.pin{width:15px;height:15px;color:var(--paddy);flex:none;}
+.location-pill .loc-label{font-size:13px;color:var(--ink);white-space:nowrap;}
+.location-pill svg.chev{width:12px;height:12px;color:var(--ink-muted);flex:none;transition:transform .15s ease;}
+.location-pill.open svg.chev{transform:rotate(180deg);}
+.location-menu{
+  position:absolute;bottom:calc(100% + 8px);left:0;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-sm);box-shadow:0 8px 24px rgba(31,36,32,.12);padding:6px;min-width:168px;
+  display:none;z-index:20;
+}
+.location-menu.open{display:block;}
+.location-menu button{
+  display:flex;align-items:center;justify-content:space-between;width:100%;text-align:right;background:none;border:none;
+  padding:8px 10px;border-radius:8px;font-family:'Noto Sans Bengali','Inter',sans-serif;font-size:13.5px;
+  color:var(--ink);cursor:pointer;transition:background .15s ease;
+}
+.location-menu button:hover{background:var(--paddy-soft);}
+.location-menu button.selected{color:var(--paddy-deep);font-weight:600;}
+.location-menu button.selected::after{content:"✓";color:var(--paddy);}
+
+/* diagnose mode */
+.diagnose-view{flex:1;min-height:0;overflow-y:auto;max-width:none;}
+.diagnose-view-inner{max-width:680px;margin:28px auto;padding:0 32px 32px;}
+.dropzone{
+  border:1.5px dashed var(--border);border-radius:var(--radius-lg);padding:48px 24px;text-align:center;
+  cursor:pointer;transition:border-color .15s ease,background .15s ease;background:var(--surface);
+}
+.dropzone:hover, .dropzone.drag{border-color:var(--paddy);background:var(--paddy-soft);}
+.dropzone svg{width:34px;height:34px;color:var(--paddy);margin-bottom:10px;}
+.dropzone p{margin:4px 0;color:var(--ink-muted);font-size:13.5px;}
+.diag-result{display:flex;flex-direction:column;gap:16px;}
+.diag-image-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);}
+.diag-image-wrap img{display:block;width:100%;height:auto;}
+.diag-image-wrap canvas{position:absolute;inset:0;width:100%;height:100%;}
+.tier-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+  padding:4px 12px;border-radius:20px;
+}
+.tier-green{background:var(--paddy-soft);color:var(--paddy-deep);}
+.tier-amber{background:#FBF1DA;color:var(--amber);}
+.tier-red{background:#FBE4DC;color:var(--red);}
+.tier-badge .dot{width:7px;height:7px;border-radius:50%;background:currentColor;}
+.diag-stat-card{
+  border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);
+  padding:18px 20px;display:flex;flex-direction:column;gap:10px;
+}
+.diag-stat-top{display:flex;align-items:center;justify-content:space-between;}
+.diag-crop{font-family:'Fraunces',serif;font-size:19px;font-weight:500;}
+.diag-confidence{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;}
+.diag-stat-row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-muted);}
+.action-card{border-radius:var(--radius-lg);}
+.action-card .card-label{font-size:11px;color:var(--soil);font-weight:600;margin-bottom:6px;}
+
+/* trace panel */
+.trace-col{width:340px;flex:none;background:var(--surface);display:flex;flex-direction:column;border-left:1px solid var(--border);}
+.trace-header{height:var(--header-h);box-sizing:border-box;padding:0 22px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--border);}
+.trace-header .eyebrow{font-family:'Fraunces',serif;font-size:16px;font-weight:500;display:flex;align-items:center;gap:7px;}
+.trace-header .eyebrow svg{width:15px;height:15px;color:var(--paddy);}
+.trace-header .desc{font-size:12px;color:var(--ink-muted);margin-top:2px;}
+.trace-body{flex:1;overflow-y:auto;padding:16px 22px 22px;}
+.trace-empty{color:var(--ink-muted);font-size:13px;padding-top:30px;text-align:center;}
+.trace-item{position:relative;padding:0 0 20px 22px;border-left:1.5px solid var(--border);}
+.trace-item:last-child{border-color:transparent;}
+.trace-item::before{
+  content:"";position:absolute;left:-5.5px;top:2px;width:9px;height:9px;border-radius:50%;
+  background:var(--paddy);border:2px solid var(--surface);
+}
+.trace-item.pending::before{background:var(--border);}
+.trace-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;cursor:pointer;}
+.trace-time{font-size:10.5px;color:var(--ink-muted);}
+.trace-latency{font-size:10.5px;color:var(--paddy);font-variant-numeric:tabular-nums;background:var(--paddy-soft);padding:1px 7px;border-radius:10px;flex:none;}
+.trace-label{font-size:13px;font-weight:600;margin-top:2px;}
+.trace-detail{font-size:12px;color:var(--ink-muted);margin-top:3px;line-height:1.5;}
+.trace-detail code{background:var(--husk);padding:1px 5px;border-radius:5px;font-size:11px;}
+.trace-raw{
+  display:none;margin-top:8px;background:var(--ink);color:#D8E3DA;font-family:ui-monospace,'SF Mono',monospace;
+  font-size:10.5px;line-height:1.5;padding:9px 11px;border-radius:8px;overflow-x:auto;white-space:pre;
+}
+.trace-item.expanded .trace-raw{display:block;}
+.trace-toggle{font-size:10.5px;color:var(--ink-muted);text-decoration:underline;text-underline-offset:2px;margin-top:4px;cursor:pointer;display:inline-block;}
+
+@media (max-width: 900px){
+  .trace-col{display:none;}
+  .rail-btn span, .rail-clear span{display:none;}
+  .rail{width:56px;}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="rail">
+    <svg class="rail-mark" viewBox="0 0 24 24" fill="none"><path d="M12 21V10M12 10C12 6 9 3 5 3c0 4 1 7 7 7Zm0 0c0-4 3-7 7-7 0 4-1 7-7 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <button class="rail-btn active" id="tab-chat" onclick="setMode('chat')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 4V5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span>চ্যাট</span>
+    </button>
+    <button class="rail-btn" id="tab-diagnose" onclick="setMode('diagnose')">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="10" r="1.5" fill="currentColor"/><path d="m5 17 4.5-4.5L12 15l3-3 4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span>ছবি</span>
+    </button>
+    <div class="rail-spacer"></div>
+    <button class="rail-clear" id="clear-btn" onclick="clearChat()" title="কথোপকথন মুছুন" aria-label="কথোপকথন মুছুন">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14M10 11v6M14 11v6M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>মুছুন</span>
+    </button>
+  </nav>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div>
+          <h1>KrishokBot</h1>
+          <div class="sub"><span class="status-dot" id="status-dot"></span><span id="status-text">সংযোগ পরীক্ষা করা হচ্ছে…</span></div>
+        </div>
+      </div>
+      <div class="sub" id="mode-hint">Bengali agriculture advisory — agentic RAG + YOLO vision</div>
+    </div>
+
+    <div class="content">
+      <!-- CHAT MODE -->
+      <div class="convo-col" id="view-chat">
+        <div class="convo" id="convo">
+          <div class="convo-inner" id="convo-inner">
+            <div class="empty" id="empty-state">
+              <svg class="empty-mark" viewBox="0 0 24 24" fill="none"><path d="M12 21V10M12 10C12 6 9 3 5 3c0 4 1 7 7 7Zm0 0c0-4 3-7 7-7 0 4-1 7-7 7Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <h2>ফসলের প্রশ্ন করুন</h2>
+              <p>রোগ, আবহাওয়া বা বাজারদর — বাংলা, ইংরেজি বা মিশ্র লিখুন।</p>
+              <div class="examples">
+                <button class="example-btn" onclick="fillAndSend('ধানের ব্লাস্ট রোগের প্রতিকার কী')"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21V10M12 10C12 6 9 3 5 3c0 4 1 7 7 7Zm0 0c0-4 3-7 7-7 0 4-1 7-7 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>ধানের ব্লাস্ট রোগের প্রতিকার কী</button>
+                <button class="example-btn" onclick="fillAndSend('এখন ঢাকায় আবহাওয়া কেমন')"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 16.9 8.1 4.5 4.5 0 0 1 17 17H7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>এখন ঢাকায় আবহাওয়া কেমন</button>
+                <button class="example-btn" onclick="fillAndSend('আজকের আলুর বাজারদর কত')"><span class="taka-icon">৳</span>আজকের আলুর বাজারদর কত</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="composer">
+          <div class="composer-inner">
+            <div class="input-row">
+              <div class="location-pill" id="location-pill" title="আবহাওয়া ও বাজারদরের জন্য অবস্থান">
+                <svg class="pin" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span class="loc-label" id="loc-label">ঢাকা</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <div class="location-menu" id="location-menu"></div>
+              </div>
+              <textarea id="msg-input" placeholder="আপনার প্রশ্ন লিখুন…" rows="1"></textarea>
+              <button class="send-btn" id="send-btn" onclick="handleSendBtnClick()">
+                <svg id="send-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12h15M13 6l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                <svg id="stop-icon" width="14" height="14" viewBox="0 0 24 24" fill="white" style="display:none;"><rect x="5" y="5" width="14" height="14" rx="2.5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIAGNOSE MODE -->
+      <div class="diagnose-view" id="view-diagnose" style="display:none;">
+        <div class="diagnose-view-inner">
+          <div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0 4 4m-4-4-4 4M5 16v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p><strong>ফসলের পাতা বা ফলের ছবি দিন</strong></p>
+            <p>ধান, আলু, টমেটো সমর্থিত — ক্লিক করুন বা টেনে আনুন</p>
+            <input type="file" id="file-input" accept="image/*" style="display:none" onchange="onFileChosen(event)" />
+          </div>
+          <div class="diag-result" id="diag-result" style="display:none;margin-top:20px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACE PANEL -->
+  <div class="trace-col">
+    <div class="trace-header">
+      <div class="eyebrow"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17c0-6 4-10 10-10M14 7l4-2M14 7l1 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Agent trace</div>
+      <div class="desc">LangGraph পাইপলাইন লাইভ দেখুন</div>
+    </div>
+    <div class="trace-body" id="trace-body">
+      <div class="trace-empty" id="trace-empty">এখনো কোনো query চলছে না।</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = "http://localhost:8000";
+let mode = "chat";
+
+function setMode(m){
+  mode = m;
+  document.getElementById("tab-chat").classList.toggle("active", m==="chat");
+  document.getElementById("tab-diagnose").classList.toggle("active", m==="diagnose");
+  document.getElementById("view-chat").style.display = m==="chat" ? "flex" : "none";
+  document.getElementById("view-diagnose").style.display = m==="diagnose" ? "block" : "none";
+  document.getElementById("mode-hint").textContent = m==="chat"
+    ? "Bengali agriculture advisory — agentic RAG + YOLO vision"
+    : "Crop-disease detection — YOLOv8 + grounded advice";
+}
+
+async function checkHealth(){
+  const dot = document.getElementById("status-dot");
+  const txt = document.getElementById("status-text");
+  try{
+    const res = await fetch(API_BASE + "/api/health");
+    const data = await res.json();
+    if(data.ready){ dot.classList.add("ok"); txt.textContent = "সংযুক্ত"; }
+    else{ txt.textContent = "Backend error: " + data.error; }
+  }catch(e){ txt.textContent = "Backend অফলাইন — সার্ভার চালু করুন (uvicorn server:app)"; }
+}
+checkHealth();
+
+// ---------- trace panel ----------
+let lastTraceTs = null;
+function resetTrace(){
+  const body = document.getElementById("trace-body");
+  body.innerHTML = "";
+  lastTraceTs = null;
+}
+function addTraceItem(label, detail, rawOutput){
+  document.getElementById("trace-empty")?.remove();
+  const body = document.getElementById("trace-body");
+  const now = performance.now();
+  const latencyMs = lastTraceTs !== null ? Math.round(now - lastTraceTs) : null;
+  lastTraceTs = now;
+
+  const el = document.createElement("div");
+  el.className = "trace-item";
+  const time = new Date().toLocaleTimeString("en-GB", {hour12:false});
+  const latencyBadge = latencyMs !== null ? `<span class="trace-latency">${latencyMs}ms</span>` : "";
+  const rawJson = rawOutput ? JSON.stringify(rawOutput, null, 2) : null;
+  el.innerHTML = `
+    <div class="trace-head">
+      <div><div class="trace-time">${time}</div><div class="trace-label">${label}</div></div>
+      ${latencyBadge}
+    </div>
+    ${detail ? `<div class="trace-detail">${detail}</div>` : ""}
+    ${rawJson ? `<span class="trace-toggle">raw output</span><pre class="trace-raw">${rawJson.replace(/</g,"&lt;")}</pre>` : ""}
+  `;
+  if(rawJson){
+    el.querySelector(".trace-toggle").addEventListener("click", () => el.classList.toggle("expanded"));
+  }
+  body.appendChild(el);
+  body.scrollTop = body.scrollHeight;
+}
+
+function traceDetailFor(node, output){
+  try{
+    if(node === "router" && output.route){
+      const r = output.route;
+      const flags = [r.needs_rag && "rag", r.needs_weather && "weather", r.needs_price && "price"].filter(Boolean).join(", ");
+      return `selected: <code>${flags}</code>`;
+    }
+    if(node === "rag" && output.citations){
+      return `${output.citations.length} source chunk(s) retrieved`;
+    }
+    if(node === "weather" && output.weather_result){
+      const w = output.weather_result;
+      return w.available ? `${w.location}: ${w.temperature_c}°C, ${w.description}` : `unavailable: ${w.error}`;
+    }
+    if(node === "price" && (output.price_result || output.market_result)){
+      if(output.market_result) return `${output.market_result.items?.length || 0} products, ${output.market_result.division}`;
+      if(output.price_result) return `${output.price_result.crop}: ${output.price_result.price_range}`;
+    }
+    if(node === "vision" && output.vision_result){
+      const v = output.vision_result;
+      return v.class_name ? `<code>${v.class_name}</code> — ${(v.confidence*100).toFixed(1)}% (${v.tier})` : "no detection";
+    }
+    if(node === "synthesis"){
+      return "answer generated";
+    }
+  }catch(e){}
+  return "";
+}
+
+// ---------- SSE helper (fetch + manual parse, since EventSource is GET-only) ----------
+async function streamSSE(url, formData, onEvent, signal){
+  const res = await fetch(url, {method:"POST", body: formData, signal});
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buf = "";
+  while(true){
+    const {done, value} = await reader.read();
+    if(done) break;
+    buf += decoder.decode(value, {stream:true});
+    const parts = buf.split("\n\n");
+    buf = parts.pop();
+    for(const part of parts){
+      const lines = part.split("\n");
+      let event = "message", data = "";
+      for(const line of lines){
+        if(line.startsWith("event: ")) event = line.slice(7);
+        if(line.startsWith("data: ")) data = line.slice(6);
+      }
+      if(data) onEvent(event, JSON.parse(data));
+    }
+  }
+}
+
+// ---------- location picker ----------
+const DIVISIONS = ["ঢাকা","চট্টগ্রাম","খুলনা","রাজশাহী","বরিশাল","রংপুর","সিলেট","ময়মনসিংহ"];
+let selectedDivision = "ঢাকা";
+const locPill = document.getElementById("location-pill");
+const locMenu = document.getElementById("location-menu");
+locMenu.innerHTML = DIVISIONS.map(d =>
+  `<button type="button" class="${d===selectedDivision?"selected":""}" data-division="${d}">${d}</button>`
+).join("");
+function renderLocationMenu(){
+  locMenu.querySelectorAll("button").forEach(btn => {
+    btn.classList.toggle("selected", btn.dataset.division === selectedDivision);
+  });
+}
+locMenu.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-division]");
+  if(!btn) return;
+  selectedDivision = btn.dataset.division;
+  document.getElementById("loc-label").textContent = selectedDivision;
+  renderLocationMenu();
+  locPill.classList.remove("open");
+  locMenu.classList.remove("open");
+});
+locPill.addEventListener("click", (e) => {
+  if(e.target.closest("button[data-division]")) return;
+  locPill.classList.toggle("open");
+  locMenu.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+  if(!locPill.contains(e.target)){
+    locPill.classList.remove("open");
+    locMenu.classList.remove("open");
+  }
+});
+
+// ---------- chat ----------
+const input = document.getElementById("msg-input");
+input.addEventListener("input", () => { input.style.height="auto"; input.style.height = input.scrollHeight+"px"; });
+input.addEventListener("keydown", (e) => { if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); sendMessage(); } });
+
+function fillAndSend(text){ input.value = text; sendMessage(); }
+
+function clearChat(){
+  const inner = document.getElementById("convo-inner");
+  inner.innerHTML = `
+    <div class="empty" id="empty-state">
+      <svg class="empty-mark" viewBox="0 0 24 24" fill="none"><path d="M12 21V10M12 10C12 6 9 3 5 3c0 4 1 7 7 7Zm0 0c0-4 3-7 7-7 0 4-1 7-7 7Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      <h2>ফসলের প্রশ্ন করুন</h2>
+      <p>রোগ, আবহাওয়া বা বাজারদর — বাংলা, ইংরেজি বা মিশ্র লিখুন।</p>
+      <div class="examples">
+        <button class="example-btn" onclick="fillAndSend('ধানের ব্লাস্ট রোগের প্রতিকার কী')"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21V10M12 10C12 6 9 3 5 3c0 4 1 7 7 7Zm0 0c0-4 3-7 7-7 0 4-1 7-7 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>ধানের ব্লাস্ট রোগের প্রতিকার কী</button>
+        <button class="example-btn" onclick="fillAndSend('এখন ঢাকায় আবহাওয়া কেমন')"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 16.9 8.1 4.5 4.5 0 0 1 17 17H7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>এখন ঢাকায় আবহাওয়া কেমন</button>
+        <button class="example-btn" onclick="fillAndSend('আজকের আলুর বাজারদর কত')"><span class="taka-icon">৳</span>আজকের আলুর বাজারদর কত</button>
+      </div>
+    </div>`;
+
+  // clear the image-diagnosis result too, not just the chat
+  const diagResult = document.getElementById("diag-result");
+  diagResult.style.display = "none";
+  diagResult.innerHTML = "";
+  const fileInput = document.getElementById("file-input");
+  if(fileInput) fileInput.value = "";
+
+  resetTrace();
+  document.getElementById("trace-body").innerHTML = '<div class="trace-empty" id="trace-empty">এখনো কোনো query চলছে না।</div>';
+}
+
+function appendMessage(role, text){
+  document.getElementById("empty-state")?.remove();
+  const inner = document.getElementById("convo-inner");
+  const wrap = document.createElement("div");
+  wrap.className = "msg " + role;
+  wrap.innerHTML = `<div class="bubble"></div>`;
+  wrap.querySelector(".bubble").textContent = text;
+  inner.appendChild(wrap);
+  document.getElementById("convo").scrollTop = 999999;
+  return wrap;
+}
+
+// ---------- send / stop button state ----------
+let activeAbortController = null;
+let wasStopped = false;
+
+function setSendBtnState(isGenerating){
+  const sendBtn = document.getElementById("send-btn");
+  document.getElementById("send-icon").style.display = isGenerating ? "none" : "block";
+  document.getElementById("stop-icon").style.display = isGenerating ? "block" : "none";
+  sendBtn.title = isGenerating ? "থামান" : "পাঠান";
+  sendBtn.classList.toggle("stopping", isGenerating);
+}
+function handleSendBtnClick(){
+  if(activeAbortController){
+    wasStopped = true;
+    activeAbortController.abort();
+  } else {
+    sendMessage();
+  }
+}
+
+async function sendMessage(){
+  if(activeAbortController) return; // already generating — use the stop button instead
+  const text = input.value.trim();
+  if(!text) return;
+  appendMessage("user", text);
+  input.value = ""; input.style.height="auto";
+  resetTrace();
+  wasStopped = false;
+  activeAbortController = new AbortController();
+  setSendBtnState(true);
+
+  const assistantEl = appendMessage("assistant", "");
+  const bubble = assistantEl.querySelector(".bubble");
+  bubble.innerHTML = '<span class="typing-dots"><span></span><span></span><span></span></span>';
+
+  const fd = new FormData();
+  fd.append("message", text);
+  fd.append("location", selectedDivision);
+
+  try{
+    await streamSSE(API_BASE + "/api/chat", fd, (event, data) => {
+      if(event === "step"){
+        addTraceItem(data.label, traceDetailFor(data.node, data.output || {}), data.output);
+      } else if(event === "final"){
+        bubble.textContent = data.answer || "(কোনো উত্তর পাওয়া যায়নি)";
+        if(data.citations && data.citations.length){
+          const chips = document.createElement("div");
+          chips.className = "citations";
+          data.citations.forEach(c => {
+            const chip = document.createElement("span");
+            chip.className = "citation-chip";
+            chip.textContent = c.page ? `${c.source} · পৃ. ${c.page}` : c.source;
+            chips.appendChild(chip);
+          });
+          assistantEl.appendChild(chips);
+        }
+        if(data.market_result && data.market_result.available){
+          const m = data.market_result;
+          const card = document.createElement("div");
+          card.className = "market-card";
+          const rows = (m.items || []).map(i =>
+            `<tr><td>${i.product}</td><td class="unit">${i.unit || ""}</td><td>${i.price_range}</td></tr>`
+          ).join("");
+          const omittedNote = m.omitted_count
+            ? `<div class="market-note">কিছু অস্পষ্ট তথ্য উৎস PDF থেকে বাদ দেওয়া হয়েছে, ভুল দাম এড়াতে।</div>` : "";
+          card.innerHTML = `
+            <div class="market-card-head"><b>${m.division} বাজারদর</b><span>${m.date}</span></div>
+            <table class="market-table"><tbody>${rows}</tbody></table>
+            ${omittedNote}
+          `;
+          assistantEl.appendChild(card);
+        }
+      } else if(event === "error"){
+        bubble.textContent = "ত্রুটি: " + data.message;
+      }
+    }, activeAbortController.signal);
+  }catch(e){
+    if(e.name === "AbortError" || wasStopped){
+      bubble.innerHTML = bubble.innerHTML.includes("typing-dots") ? "থামানো হয়েছে।" : bubble.innerHTML + " (থামানো হয়েছে)";
+    } else {
+      bubble.textContent = "সার্ভারে সংযোগ ব্যর্থ হয়েছে।";
+    }
+  }
+  activeAbortController = null;
+  setSendBtnState(false);
+}
+
+// ---------- diagnose ----------
+const dropzone = document.getElementById("dropzone");
+["dragover","dragleave","drop"].forEach(evt => {
+  dropzone.addEventListener(evt, (e) => {
+    e.preventDefault();
+    dropzone.classList.toggle("drag", evt === "dragover");
+    if(evt === "drop" && e.dataTransfer.files[0]) handleImage(e.dataTransfer.files[0]);
+  });
+});
+function onFileChosen(e){ if(e.target.files[0]) handleImage(e.target.files[0]); }
+
+async function handleImage(file){
+  resetTrace();
+  const resultEl = document.getElementById("diag-result");
+  resultEl.style.display = "flex";
+  const objectUrl = URL.createObjectURL(file);
+  resultEl.innerHTML = `
+    <div class="diag-image-wrap">
+      <img id="diag-img" src="${objectUrl}" />
+      <canvas id="diag-canvas"></canvas>
+    </div>
+    <div id="diag-stat-slot"></div>
+    <div id="diag-answer-slot"></div>
+  `;
+  document.getElementById("diag-answer-slot").innerHTML =
+    `<div class="bubble action-card" style="border:1px solid var(--border);box-shadow:0 1px 2px rgba(31,36,32,.04);"><div class="card-label">সুপারিশ</div><span class="typing-dots"><span></span><span></span><span></span></span></div>`;
+
+  const fd = new FormData();
+  fd.append("image", file);
+  fd.append("message", "");
+
+  try{
+    await streamSSE(API_BASE + "/api/diagnose", fd, (event, data) => {
+      if(event === "step"){
+        addTraceItem(data.label, traceDetailFor(data.node, data.output || {}), data.output);
+      } else if(event === "final"){
+        const answerBox = document.querySelector("#diag-answer-slot .bubble");
+        answerBox.innerHTML = `<div class="card-label">সুপারিশ</div>${(data.answer || "(কোনো উত্তর পাওয়া যায়নি)").replace(/</g,"&lt;")}`;
+        if(data.vision_result){
+          drawDetection(data.vision_result);
+          renderDiagStat(data.vision_result);
+        }
+        if(data.citations && data.citations.length){
+          const chips = document.createElement("div");
+          chips.className = "citations";
+          data.citations.forEach(c => {
+            const chip = document.createElement("span");
+            chip.className = "citation-chip";
+            chip.textContent = c.page ? `${c.source} · পৃ. ${c.page}` : c.source;
+            chips.appendChild(chip);
+          });
+          document.getElementById("diag-answer-slot").appendChild(chips);
+        }
+      } else if(event === "error"){
+        document.querySelector("#diag-answer-slot .bubble").textContent = "ত্রুটি: " + data.message;
+      }
+    });
+  }catch(e){
+    document.querySelector("#diag-answer-slot .bubble").textContent = "সার্ভারে সংযোগ ব্যর্থ হয়েছে।";
+  }
+}
+
+function renderDiagStat(v){
+  const tierColor = v.tier === "green" ? "var(--paddy)" : v.tier === "amber" ? "var(--amber)" : "var(--red)";
+  const tierLabel = v.tier === "green" ? "উচ্চ নিশ্চয়তা" : v.tier === "amber" ? "মাঝারি নিশ্চয়তা" : "নিম্ন নিশ্চয়তা — যাচাই প্রয়োজন";
+  document.getElementById("diag-stat-slot").innerHTML = `
+    <div class="diag-stat-card">
+      <div class="diag-stat-top">
+        <div>
+          <div class="diag-crop">${v.crop_bn || "অজানা ফসল"}</div>
+          <div class="trace-detail" style="margin-top:2px;">${v.bn_name || v.class_name || "শনাক্ত করা যায়নি"}</div>
+        </div>
+        <div class="diag-confidence" style="color:${tierColor};">${v.confidence ? (v.confidence*100).toFixed(0)+"%" : "—"}</div>
+      </div>
+      <div class="diag-stat-row"><span>${tierLabel}</span><span>YOLOv8 crop-disease detector</span></div>
+    </div>`;
+}
+
+function drawDetection(v){
+  const img = document.getElementById("diag-img");
+  const canvas = document.getElementById("diag-canvas");
+  const draw = () => {
+    canvas.width = img.clientWidth; canvas.height = img.clientHeight;
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    if(v.bbox && v.bbox.length === 4){
+      const sx = img.clientWidth / img.naturalWidth, sy = img.clientHeight / img.naturalHeight;
+      const [x1,y1,x2,y2] = v.bbox;
+      const tierColor = v.tier === "green" ? "#2F6F4E" : v.tier === "amber" ? "#B8860B" : "#B3401E";
+      ctx.strokeStyle = tierColor; ctx.lineWidth = 3;
+      ctx.strokeRect(x1*sx, y1*sy, (x2-x1)*sx, (y2-y1)*sy);
+    }
+  };
+  if(img.complete) draw(); else img.onload = draw;
+}
+</script>
+</body>
+</html>

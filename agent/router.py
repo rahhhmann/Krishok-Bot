@@ -30,6 +30,12 @@ class RouteDecision(BaseModel):
     crops: list[str] = []
     reasoning: str = ""
     source: str = "llm"  # "llm" | "keyword_fallback"
+    # True only for the early-return greeting/unclear-input path in route()
+    # below. Distinguishes "the router deliberately selected nothing" from
+    # "the LLM's decision came back malformed" — route_selector's safety
+    # net (agent/graph.py) needs this to avoid forcing RAG on every "hi"/
+    # "bye", which is what happened before this field existed.
+    is_off_topic: bool = False
 
 
 _WEATHER_KEYWORDS = re.compile(
@@ -195,6 +201,7 @@ def route(query: str, llm: Optional[LLMProvider] = None) -> RouteDecision:
             needs_price=False,
             reasoning="greeting, farewell, or unclear input",
             source="keyword_fallback",
+            is_off_topic=True,
         )
     llm = llm or get_llm()
 

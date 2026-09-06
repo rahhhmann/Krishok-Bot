@@ -122,7 +122,10 @@ def route_node(state: AgentState) -> dict:
 
 def route_selector(state: AgentState) -> list[str]:
     """Conditional-edge function: fan out to whichever of rag/weather/price
-    the router selected. Always includes at least one branch."""
+    the router selected. Falls back to "rag" only when the decision came
+    back with nothing selected unintentionally (a malformed LLM response) —
+    never for a deliberate is_off_topic decision (greeting/unclear input),
+    which must reach synthesis with no retrieval and no citations."""
     decision = state["route"]
     dests = []
     if decision.needs_rag:
@@ -132,7 +135,11 @@ def route_selector(state: AgentState) -> list[str]:
     if decision.needs_price:
         dests.append("price")
     if not dests:
-        dests.append("rag")  # safety net — see RouteDecision default
+        # "rag" is still the destination even when off-topic, because the
+        # conditional edge can only fan out to rag/weather/price — but
+        # rag_node itself no-ops for is_off_topic (see below), so no
+        # retrieval happens and no citations are produced.
+        dests.append("rag")
     return dests
 
 
@@ -162,11 +169,35 @@ def extract_citations(chunks: list) -> list[dict]:
 
 
 def rag_node(state: AgentState) -> dict:
+    route = state.get("route")
+    if route is not None and getattr(route, "is_off_topic", False):
+        # Greeting/farewell/unclear input: the router deliberately selected
+        # no branch. Skip retrieval entirely instead of citing whatever
+        # happens to rank highest for "hi" — this is what was showing
+        # unrelated PDF sources under greeting replies.
+        return {"retrieved_chunks": [], "citations": []}
     try:
         from rag.retriever import get_retriever  # local import: keeps rag/ optional at import time
 
         retriever = get_retriever()
-        chunks = retriever.retrieve(state["normalized_query"], top_k=5)
+        # Retrieve a wider pool than we need so crop-filtering below has
+        # something to work with, then narrow to the query's crop (if any)
+        # before truncating to the top 5 — same principle as the image
+        # path's crop-scoped RAG enrichment, applied to text queries.
+        route = state.get("route")
+        crop_key = _text_crop_key(getattr(route, "crop", None)) if route else ""
+        pool_size = 10 if crop_key else 5
+        chunks = retriever.retrieve(state["normalized_query"], top_k=pool_size)
+
+        if crop_key:
+            scoped = _filter_chunks_by_crop(chunks, crop_key)
+            # Never let scoping produce zero results for a crop we simply
+            # don't have clean filename/text signals for — fall back to the
+            # unscoped pool rather than silently answering "no info found".
+            chunks = scoped[:5] if scoped else chunks[:5]
+        else:
+            chunks = chunks[:5]
+
         safe_chunks = filter_injected_chunks(chunks)
         return {
             "retrieved_chunks": safe_chunks,
@@ -254,6 +285,51 @@ _IMAGE_CLASS_TERMS = {
     "potato": ("আলু", "potato"),
     "tomato": ("টমেটো", "tomato"),
 }
+
+# filename fragments that identify which crop a source PDF is about — used
+# to scope RAG retrieval so a query about one crop can't cite a document
+# about a different one (see _filter_chunks_by_crop / rag_node).
+_CROP_SOURCE_TERMS = {
+    "rice": ("dhan", "dhaner", "rice"),
+    "potato": ("alu", "potato"),
+    "tomato": ("tomato",),
+}
+
+
+def _text_crop_key(text: str) -> str:
+    """Map a Bangla/English crop mention (e.g. router's decision.crop) to
+    one of the known crop keys ('rice'/'potato'/'tomato'), or '' if the
+    query isn't about one of the crops we have crop-specific PDFs for."""
+    value = (text or "").casefold()
+    if not value:
+        return ""
+    for key, terms in _IMAGE_CLASS_TERMS.items():
+        if any(term.casefold() in value for term in terms):
+            return key
+    return ""
+
+
+def _filter_chunks_by_crop(chunks: list, crop_key: str) -> list:
+    """Keep only chunks whose source filename names this crop. If filename
+    matching yields nothing (metadata may not always carry a clean source
+    name), fall back to matching the crop's Bangla/English terms inside the
+    chunk text itself, mirroring the same two-stage approach already used
+    for image queries in run_image_query."""
+    if not crop_key:
+        return chunks
+    source_terms = _CROP_SOURCE_TERMS.get(crop_key, ())
+    scoped = [
+        c for c in chunks
+        if any(term in str(getattr(c, "source", "")).casefold() for term in source_terms)
+    ]
+    if scoped:
+        return scoped
+    text_terms = _IMAGE_CLASS_TERMS.get(crop_key, ())
+    scoped = [
+        c for c in chunks
+        if any(term.casefold() in str(getattr(c, "text", "")).casefold() for term in text_terms)
+    ]
+    return scoped
 
 
 def _vision_crop_key(vision: dict) -> str:
